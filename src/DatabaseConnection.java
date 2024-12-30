@@ -23,7 +23,7 @@ public class DatabaseConnection {
         // Establishing the connection
         try {
             connection = DriverManager.getConnection(url, user, password);
-            System.out.println("Successfully connected to the database");
+          //  System.out.println("Successfully connected to the database");
         } catch (SQLException e) {
             System.out.println("Error in establishing connection with database");
             System.out.println(e.getMessage());

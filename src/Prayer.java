@@ -1,49 +1,46 @@
-/// <h1>Project Title: Prayer Tracker</h1>
-/// @Start Date  19.December.2024
-/// @author Afra, Munesha, Saba, Bakhtawar
+/**
+ * <h3>Purpose of this class:</h3>
+ * store a blueprint of each prayer
+ */
 public class Prayer {
+    private String prayerName;
+    private String status;
+    private String date;
+    private Integer khushuRating;
+    private String notes;
 
-    public class Prayer {
-        private String prayerName;
-        private boolean isPrayed;
-        private String date;
-
-        // Constructor
-        public Prayer(String prayerName, boolean isPrayed, String date) {
-            this.prayerName = prayerName;
-            this.isPrayed = isPrayed;
-            this.date = date;
-        }
-
-        // Getters and Setters
-        public String getPrayerName() {
-            return prayerName;
-        }
-
-        public void setPrayerName(String prayerName) {
-            this.prayerName = prayerName;
-        }
-
-        public boolean isPrayed() {
-            return isPrayed;
-        }
-
-        public void setPrayed(boolean prayed) {
-            isPrayed = prayed;
-        }
-
-        public String getDate() {
-            return date;
-        }
-
-        public void setDate(String date) {
-            this.date = date;
-        }
-
-        @Override
-        public String toString() {
-            return "Prayer: " + prayerName + ", Prayed: " + isPrayed + ", Date: " + date;
-        }
+    public Prayer(String prayerName, String status, String date, Integer khushuRating, String notes) {
+        this.prayerName = prayerName;
+        this.status = status;
+        this.date = date;
+        this.khushuRating = khushuRating;
+        this.notes = notes;
     }
 
+    // Getters and setters
+    public String getPrayerName() { return prayerName; }
+    public void setPrayerName(String prayerName) { this.prayerName = prayerName; }
+
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
+
+    public String getDate() { return date; }
+    public void setDate(String date) { this.date = date; }
+
+    public Integer getKhushuRating() { return khushuRating; }
+    public void setKhushuRating(Integer khushuRating) { this.khushuRating = khushuRating; }
+
+    public String getNotes() { return notes; }
+    public void setNotes(String notes) { this.notes = notes; }
+
+    @Override
+    public String toString() {
+        return "Prayer{" +
+                "prayerName='" + prayerName + '\'' +
+                ", status='" + status + '\'' +
+                ", date='" + date + '\'' +
+                ", khushuRating=" + khushuRating +
+                ", notes='" + notes + '\'' +
+                '}';
+    }
 }
