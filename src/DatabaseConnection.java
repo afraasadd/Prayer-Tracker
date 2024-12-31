@@ -1,8 +1,12 @@
-import java.sql.*;
+/*
+This class connects the database to our project.
+ */
 
+import java.sql.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 public class DatabaseConnection {
 
-    // Method to establish connection with the database
     public static Connection connect() {
         // JDBC URL and credentials
         String url = "jdbc:postgresql://localhost:5432/prayer_tracker";
@@ -23,7 +27,7 @@ public class DatabaseConnection {
         // Establishing the connection
         try {
             connection = DriverManager.getConnection(url, user, password);
-          //  System.out.println("Successfully connected to the database");
+            //  System.out.println("Successfully connected to the database");
         } catch (SQLException e) {
             System.out.println("Error in establishing connection with database");
             System.out.println(e.getMessage());
@@ -42,4 +46,3 @@ public class DatabaseConnection {
         }
     }
 }
-
