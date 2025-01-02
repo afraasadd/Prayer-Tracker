@@ -1,5 +1,5 @@
-/*
-This is the main/entry class of our project.
+/**
+ * This is the entry point of the application.
  */
 import java.util.*;
 

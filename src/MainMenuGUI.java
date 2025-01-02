@@ -14,7 +14,19 @@ public class MainMenuGUI extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        JPanel mainPanel = new JPanel(new GridLayout(5, 1, 10, 10));
+        // Load the background image
+        String imagePath = "C:\\Users\\ll\\Downloads\\universiy\\oop lab\\munesha.jpeg"; // Use the full path to your image
+        ImageIcon backgroundIcon = new ImageIcon(imagePath);
+        Image backgroundImage = backgroundIcon.getImage();
+
+        // Check if the image is loaded correctly
+        if (backgroundImage == null) {
+            System.out.println("Failed to load background image from: " + imagePath);
+        }
+
+        // Create the custom background panel
+        BackgroundPanel mainPanel = new BackgroundPanel(backgroundImage);
+        mainPanel.setLayout(new GridLayout(5, 1, 10, 10));
         mainPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         JLabel welcomeLabel = new JLabel("Welcome to the Prayer Tracker", JLabel.CENTER);
